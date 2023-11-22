@@ -1,0 +1,11 @@
+-----------------------------------------      Create Migrations      -----------------------------------------
+
+npx sequelize-cli model:generate --name Users --attributes username:string,email:string,password_hash:string,bio:text,profile_pic:string,join_date:date,location:string
+
+npx sequelize-cli model:generate --name Posts --attributes user_id:bigint,content:text,creation_time:date,is_reply:boolean,original_post_id:bigint
+
+npx sequelize-cli model:generate --name Followers --attributes follower_id:bigint,following_id:bigint,follow_time:date
+
+npx sequelize-cli model:generate --name Likes --attributes user_id:bigint,post_id:bigint,like_date_time:date
+
+-----------------------------------------      Create Migrations Ends      -----------------------------------------
